@@ -1,24 +1,90 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Meine OnePage</title>
-  <style>
-    body { font-family: system-ui, sans-serif; margin: 0; line-height: 1.6; }
-    section { padding: 4rem 1.5rem; max-width: 800px; margin: auto; }
-    nav { position: sticky; top: 0; background: #222; padding: 1rem; }
-    nav a { color: #fff; margin-right: 1rem; text-decoration: none; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Milan Vukasinovic – Lebenslauf</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1d2433;
+    --muted: #5b6475;
+    --line: #1d2433;
+    --side: #b3c6e7;
+    --side-text: #12203d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12161f;
+      --text: #e8ecf4;
+      --muted: #a3acbd;
+      --line: #e8ecf4;
+      --side: #2b3a59;
+      --side-text: #e8ecf4;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Avenir Next", "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  .page { display: grid; grid-template-columns: 300px 1fr; min-height: 100vh; max-width: 1000px; margin: auto; }
+  aside { background: var(--side); color: var(--side-text); padding: 3rem 2rem; }
+  aside img { width: 100%; height: auto; display: block; margin-bottom: 2rem; }
+  aside h2 { font-size: 1rem; margin: 0 0 .25rem; }
+  aside p { margin: 0 0 1.5rem; }
+  aside a { color: inherit; overflow-wrap: anywhere; }
+  main { padding: 3rem 2.5rem; }
+  h1 { font-size: 2.2rem; margin: 0; line-height: 1.15; }
+  .sub { color: var(--muted); font-size: 1.2rem; margin: .25rem 0 2.5rem; }
+  h2.sec { font-size: 1.05rem; letter-spacing: .03em; text-transform: uppercase; border-bottom: 1px solid var(--line); padding-bottom: .3rem; margin: 2.5rem 0 1rem; }
+  .row { display: grid; grid-template-columns: 150px 1fr; gap: .25rem 1rem; margin-bottom: .9rem; }
+  .row .when { color: var(--muted); }
+  .row b { display: block; }
+  @media (max-width: 720px) {
+    .page { grid-template-columns: 1fr; }
+    aside { padding: 2rem 1.5rem; }
+    aside img { max-width: 220px; }
+    main { padding: 2rem 1.5rem; }
+    .row { grid-template-columns: 1fr; gap: 0; }
+  }
+</style>
 </head>
 <body>
-  <nav>
-    <a href="#start">Start</a>
-    <a href="#about">Über mich</a>
-    <a href="#kontakt">Kontakt</a>
-  </nav>
-  <section id="start"><h1>Hallo!</h1><p>Willkommen auf meiner Seite.</p></section>
-  <section id="about"><h2>Über mich</h2><p>Text hier …</p></section>
-  <section id="kontakt"><h2>Kontakt</h2><p>mail@example.com</p></section>
+<div class="page">
+  <aside>
+    <img src="foto.jpg" alt="Foto von Milan Vukasinovic">
+    <h2>E-Mail</h2>
+    <p><a href="mailto:milanvukasinovic@tuta.com">milanvukasinovic@tuta.com</a></p>
+    <h2>Wohnort</h2>
+    <p>Vilgertshofen</p>
+  </aside>
+
+  <main>
+    <h1>Milan Vukasinovic</h1>
+    <p class="sub">Lebenslauf</p>
+
+    <h2 class="sec">Berufliche Laufbahn</h2>
+    <div class="row"><div class="when">09/2025 – 09/2026</div><div>Isoled Fiai Handels GmbH<b>Full-Stack-Entwickler</b></div></div>
+    <div class="row"><div class="when">06/2024 – 09/2024</div><div>Porr GmbH<b>Praktikum System Administrator</b></div></div>
+    <div class="row"><div class="when">06/2023 – 09/2023</div><div>3CON Technologies<b>Praktikum Full-Stack Entwickler</b></div></div>
+    <div class="row"><div class="when">02/2020 – 05/2022</div><div>Felder GmbH<b>Technischer Support</b></div></div>
+
+    <h2 class="sec">Schulische Laufbahn</h2>
+    <div class="row"><div class="when">09/2022 – 09/2025</div><div>HTL Imst<b>IT-College als Softwareentwickler</b></div></div>
+    <div class="row"><div class="when">09/2015 – 07/2019</div><div>Tiroler Fachberufsschule für Handel<b>Schwerpunkt: Einrichtungsberater</b></div></div>
+    <div class="row"><div class="when">09/2011 – 02/2014</div><div>Handelsakademie Innsbruck</div></div>
+
+    <h2 class="sec">Kenntnisse &amp; Fähigkeiten</h2>
+    <div class="row"><div class="when">Sprachen</div><div>Deutsch (Muttersprache)<br>Serbisch (gut Wort und Schrift)<br>Englisch (gut Wort und Schrift)</div></div>
+    <div class="row"><div class="when">Tools</div><div>VCS mit Git, Docker</div></div>
+    <div class="row"><div class="when">Datenbank</div><div>MariaDB, MySQL</div></div>
+    <div class="row"><div class="when">Betriebssystem</div><div>Windows, Linux</div></div>
+    <div class="row"><div class="when">Technologien</div><div>Java, PHP, JavaScript, TypeScript, REST API</div></div>
+  </main>
+</div>
 </body>
 </html>
